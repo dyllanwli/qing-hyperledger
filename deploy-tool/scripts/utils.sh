@@ -86,7 +86,7 @@ function installAndInstantiate() {
 		-H "authorization: Bearer $ORG1_TOKEN" \
 		-H "content-type: application/json" \
 		-d "{
-        \"peers\": [\"peer0.org1.example.com\",\"peer1.org1.example.com\"],
+        \"peers\": [\"peer0.org1.example.com\"],
         \"chaincodeName\":\"$CCN\",
         \"chaincodePath\":\"$CCP\",
         \"chaincodeType\": \"golang\",
@@ -163,7 +163,7 @@ function invoke() {
 		-H "authorization: Bearer $ORG1_TOKEN" \
 		-H "content-type: application/json" \
 		-d "{
-		\"peers\": [\"peer0.org1.example.com\",\"peer0.org2.example.com\"],
+		\"peers\": [\"peer0.org1.example.com\"],
 		\"fcn\": \"$FCN\",
 		\"args\":$ARG
 	}")
