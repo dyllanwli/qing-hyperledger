@@ -22,3 +22,13 @@
 # nvm install 8.9.4
 # nvm use 9.8.4
 # pip install docker-compose
+
+# vim /usr/lib/systemd/system/docker.service
+# add the two lines below on the file, which located in the [Service] section
+# 
+# ExecStart=
+# ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock
+# 
+
+# systemctl daemon-reload
+# systemctl restart docker
