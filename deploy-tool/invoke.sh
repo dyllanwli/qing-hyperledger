@@ -10,7 +10,7 @@ enroll
 
 # sample invoke 
 # invoke chaincodeName functionName arg
-invoke example move '[\"a\", \"b\" , \"1\"]'
+invoke example move '\"a\", \"b\", \"1\"'
 
 # sample query
 # query <Transacton ID> peer0.org1.example.com

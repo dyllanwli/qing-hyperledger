@@ -77,7 +77,7 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
 	logger.Info("########### example_cc0 Invoke ###########")
 
 	function, args := stub.GetFunctionAndParameters()
-	fmt.Println("the invoke args:", args)
+	fmt.Println("the invoke args:", function, args)
 	// if err := json.Unmarshal(body, args); err != nil {
 	// 	return shim.Error("JSON unmarshal error")
 	// }
@@ -98,6 +98,7 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
 
 	if function == "move" {
 		// Deletes an entity from its state
+		fmt.Println("hahaha")
 		return t.move(stub, args)
 	}
 

@@ -81,7 +81,7 @@ function check(){
 trash package-lock.json
 trash /tmp/*
 trash /data/ordererdata/*/*
-trash /data/peerdata/*/*/*
+trash /data/peerdata/*/*/*/*
 chmod +x *.sh
 chmod +x ./*/*.sh
 MODE=$1
