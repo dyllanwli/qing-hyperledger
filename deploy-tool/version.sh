@@ -15,6 +15,8 @@ function down() {
 	# delete docker chaincode container
 	docker rmi -f $(docker images | grep dev | awk '{print $3}')
 	# delete chaincode images
+	trash /data/ordererdata/*/*
+	trash /data/peerdata/*/*/*/*
 }
 
 function up(){
@@ -80,8 +82,7 @@ function check(){
 # clear temp lock file
 trash package-lock.json
 trash /tmp/*
-trash /data/ordererdata/*/*
-trash /data/peerdata/*/*/*/*
+
 chmod +x *.sh
 chmod +x ./*/*.sh
 MODE=$1

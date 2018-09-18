@@ -157,7 +157,7 @@ function invoke() {
 	FCN=$2
 	ARG=$3
 	echo "POST invoke chaincode on peers of Org1"
-	echo "$ARG"
+	echo "[$ARG]"
 	TRX_ID=$(curl -s -X POST \
 		http://localhost:4000/channels/$CHANNEL/chaincodes/$CCN \
 		-H "authorization: Bearer $ORG1_TOKEN" \
@@ -165,7 +165,7 @@ function invoke() {
 		-d "{
 		\"peers\": [\"peer0.org1.example.com\"],
 		\"fcn\": \"$FCN\",
-		\"args\":[$ARG]
+		\"args\":[\"a\",\"b\",\"1\"]
 	}")
 	echo "Transacton ID is $TRX_ID"
 	echo
