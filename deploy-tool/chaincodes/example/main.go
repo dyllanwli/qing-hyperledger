@@ -20,8 +20,7 @@ package main
 import (
 	"fmt"
 	"strconv"
-	"encoding/json"
-
+	// "encoding/json"
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 	pb "github.com/hyperledger/fabric/protos/peer"
 )
@@ -37,6 +36,7 @@ func (t *SimpleChaincode) Init(stub shim.ChaincodeStubInterface) pb.Response  {
 	logger.Info("########### example Init ###########")
 
 	_, args := stub.GetFunctionAndParameters()
+	fmt.Println("the init args:", args)
 	var A, B string    // Entities
 	var Aval, Bval int // Asset holdings
 	var err error
@@ -77,7 +77,7 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface) pb.Response {
 	logger.Info("########### example_cc0 Invoke ###########")
 
 	function, args := stub.GetFunctionAndParameters()
-	fmt.Println("the args:", args)
+	fmt.Println("the invoke args:", args)
 	// if err := json.Unmarshal(body, args); err != nil {
 	// 	return shim.Error("JSON unmarshal error")
 	// }

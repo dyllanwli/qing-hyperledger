@@ -9,7 +9,7 @@ CHANNEL=mychannel
 . ../scripts/utils.sh
 # copy chaincode
 trash ./artifacts/src/*
-cp -r ../chaincodes/* ./artifacts/src
+cp -r ../chaincodes/* ./artifacts/src/
 
 enroll
 #enroll user by time
