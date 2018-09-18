@@ -165,7 +165,7 @@ function invoke() {
 		-d "{
 		\"peers\": [\"peer0.org1.example.com\"],
 		\"fcn\": \"$FCN\",
-		\"args\":$ARG
+		\"args\":[$ARG]
 	}")
 	echo "Transacton ID is $TRX_ID"
 	echo
