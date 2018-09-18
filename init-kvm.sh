@@ -5,7 +5,9 @@
 # yum install epel-release -y
 # yum install jq -y
 # jq --version
-# yum install -y git wget net-tool curl vim
+# yum install -y git wget net-tool curl vim redis
+
+# systemctl start redis
 
 # wget http://appcenter-docs.qingcloud.com/developer-guide/scripts/app-agent-linux-amd64.tar.gz
 # tar -xvf app-agent-linux-amd64.tar.gz
@@ -32,3 +34,4 @@
 
 # systemctl daemon-reload
 # systemctl restart docker
+
