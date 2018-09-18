@@ -18,3 +18,4 @@
 
 # nvm install 8.9.4
 # nvm use 9.8.4
+# pip install docker-compose
