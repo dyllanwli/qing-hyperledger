@@ -231,6 +231,8 @@ app.post('/channels/:channelName/chaincodes', async function(req, res) {
 	logger.debug('chaincodeType  : ' + chaincodeType);
 	logger.debug('fcn  : ' + fcn);
 	logger.debug('args  : ' + args);
+	logger.debug('username  : ' + username);
+	logger.debug('orgname  : ' + orgname);
 	if (!chaincodeName) {
 		res.json(getErrorMessage('\'chaincodeName\''));
 		return;

@@ -95,21 +95,21 @@ function installAndInstantiate() {
 	echo
 	echo
 
-	# echo "POST Install chaincode on Org2"
-	# echo
-	# curl -s -X POST \
-	# 	http://localhost:4000/chaincodes \
-	# 	-H "authorization: Bearer $ORG2_TOKEN" \
-	# 	-H "content-type: application/json" \
-	# 	-d "{
-    #     \"peers\": [\"peer0.org2.example.com\",\"peer1.org2.example.com\"],
-    #     \"chaincodeName\":\"$CCN\",
-    #     \"chaincodePath\":\"$CCP\",
-    #     \"chaincodeType\": \"golang\",
-    #     \"chaincodeVersion\":\"$CCV\"
-    # }"
-	# echo
-	# echo
+	echo "POST Install chaincode on Org2"
+	echo
+	curl -s -X POST \
+		http://localhost:4000/chaincodes \
+		-H "authorization: Bearer $ORG2_TOKEN" \
+		-H "content-type: application/json" \
+		-d "{
+        \"peers\": [\"peer0.org2.example.com\"],
+        \"chaincodeName\":\"$CCN\",
+        \"chaincodePath\":\"$CCP\",
+        \"chaincodeType\": \"golang\",
+        \"chaincodeVersion\":\"$CCV\"
+    }"
+	echo
+	echo
 
 	echo "POST instantiate chaincode on peer1 of Org1"
 	echo
