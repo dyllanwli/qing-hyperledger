@@ -100,8 +100,11 @@ elif [ "$MODE" == "1.1.0" ]; then
     version 1.1.0 1.1.0
 elif [ "$MODE" == "1.2.0" ]; then
     version 1.2.0 1.2.0
-elif [ "$MODE" == "vered" ]; then
-    version 1.2.0 vered
+elif [ "$MODE" == "clear" ]; then
+    down
+	trash $CUR_DIR/artifacts/*
+	tarsh $CUR_DIR/tool/*
+	trash-empty
 else
 	echo "Not matching any parameters"
 	exit 1
