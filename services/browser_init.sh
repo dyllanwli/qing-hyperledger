@@ -19,7 +19,7 @@ WORK_NODE_IP=0.0.0.0
 function getWorkNodeIP() {
     WORK_NODE_IP=$(curl http://metadata/self/hosts/work_node | grep /ip | awk '{print $2}')
 }
-getWorkNodeIP()
+getWorkNodeIP
 
 cd $EXPLORER_DIR/config
 sed -i "s/localhost/$WORK_NODE_IP/g" network-config-tls.json
