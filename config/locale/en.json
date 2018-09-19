@@ -1,5 +1,6 @@
 {
-    "Participant Node": "Participant Node",
+    "Work Node": "Work Node",
+    "Browser Node": "Browser Node",
     "min": "Minimum Latency",
     "avg": "Average Latency",
     "max": "Maximum Latency",

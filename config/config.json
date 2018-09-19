@@ -27,7 +27,7 @@
       "required": "yes"
     }, {
       "key": "work_node",
-      "label": "Participant Node",
+      "label": "Work Node",
       "description": "Properties for participant nodes",
       "type": "array",
       "properties": [{
@@ -72,7 +72,7 @@
       }]
     }, {
       "key": "browser_node",
-      "label": "Participant Node",
+      "label": "Browser Node",
       "description": "Properties for participant nodes",
       "type": "array",
       "properties": [{
