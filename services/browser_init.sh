@@ -26,3 +26,4 @@ getWorkNodeIP
 
 cd $EXPLORER_DIR/config
 sed -i "s/localhost/$WORK_NODE_IP/g" network-config-tls.json
+sed -i "s/localhost/$WORK_NODE_IP/g" server.json
