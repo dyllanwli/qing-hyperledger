@@ -10,10 +10,16 @@
 
 INIT_DIR=${PWD}
 DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
-
+EXPLORER_DIR=/root/blockchain-explorer
 # start docker.server and redis database
 systemctl start docker 
 systemctl start redis
 
-cd ~
+WORK_NODE_IP=0.0.0.0
+function getWorkNodeIP() {
+    WORK_NODE_IP=$(curl http://metadata/self/hosts/work_node | grep /ip | awk '{print $2}')
+}
+getWorkNodeIP()
+
+cd $EXPLORER_DIR/config
 sed -i "s/localhost/$WORK_NODE_IP/g" network-config-tls.json
