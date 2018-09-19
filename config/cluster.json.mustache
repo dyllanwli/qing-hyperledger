@@ -19,13 +19,14 @@
     "server_id_upper_bound": 255,
     "services": {
       "init": {
-        "cmd": "echo 'init' "
+        "cmd": "/root/qing-hyperledger/work_init.sh"
       },
       "start": {
-        "cmd": "echo 'start' "
+        "cmd": "/root/qing-hyperledger/work_start.sh",
+        "order":1
       },
       "stop": {
-        "cmd": "echo 'stop' "
+        "cmd": "/root/qing-hyperledger/work_stop.sh"
       },
       "upgrade": {
         "cmd": "echo 'upgrade' "
@@ -52,7 +53,8 @@
         "cmd": "echo 'init' "
       },
       "start": {
-        "cmd": "echo 'start' "
+        "cmd": "echo 'start' ",
+        "order":2
       },
       "stop": {
         "cmd": "echo 'stop' "

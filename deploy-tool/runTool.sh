@@ -4,4 +4,4 @@ cd tool
 trash ./artifacts/*
 cp -rf ../artifacts ./
 trash fabric*
-node app.js
+pm2 start app.js

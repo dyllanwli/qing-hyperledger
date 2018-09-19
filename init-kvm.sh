@@ -2,10 +2,11 @@
 
 # This scripts is used to record the operation on a new kvm
 
+# cd scripts
 # yum install epel-release -y
 # yum install jq -y
 # jq --version
-# yum install -y git wget net-tool curl vim redis
+# yum install -y git wget net-tool curl vim redis screen
 
 # systemctl start redis
 
@@ -13,10 +14,10 @@
 # tar -xvf app-agent-linux-amd64.tar.gz
 # bash app-agent-linux-amd64/install.sh
 
-# python ./scripts/get-pip.py
+# python ./get-pip.py
 # curl -fsSL https://get.docker.com/ | sh
 # systemctl start docker
-# bash ./scripts/get-image.sh
+# bash ./get-image.sh
 # curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
 # start a new terminal 
