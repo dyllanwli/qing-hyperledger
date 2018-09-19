@@ -2,11 +2,8 @@
   "name": {{cluster.name}},
   "description": {{cluster.description}},
   "vxnet": {{cluster.vxnet}},
-  "upgrade_policy": [
-    "appv-70gegwmp",
-    "appv-dm3ltpxw"
-  ],
   "nodes": [{
+    "role":"work_node",
     "container": {
       "type": "kvm",
       "zone": "pek3a",
@@ -22,20 +19,21 @@
     "server_id_upper_bound": 255,
     "services": {
       "init": {
-        "cmd": ""
+        "cmd": "echo 'init' "
       },
       "start": {
-        "cmd": ""
+        "cmd": "echo 'start' "
       },
       "stop": {
-        "cmd": ""
+        "cmd": "echo 'stop' "
       },
       "upgrade": {
-        "cmd": ""
+        "cmd": "echo 'upgrade' "
       }
     },
     "vertical_scaling_policy": "sequential"
   },{
+    "role":"browser_node",
     "container": {
       "type": "kvm",
       "zone": "pek3a",
@@ -51,16 +49,16 @@
     "server_id_upper_bound": 255,
     "services": {
       "init": {
-        "cmd": ""
+        "cmd": "echo 'init' "
       },
       "start": {
-        "cmd": ""
+        "cmd": "echo 'start' "
       },
       "stop": {
-        "cmd": ""
+        "cmd": "echo 'stop' "
       },
       "upgrade": {
-        "cmd": ""
+        "cmd": "echo 'upgrade' "
       }
     },
     "vertical_scaling_policy": "sequential"
@@ -78,7 +76,7 @@
     "action_timeout_sec": 30,
     "healthy_threshold": 2,
     "unhealthy_threshold": 2,
-    "check_cmd": "echo",
+    "check_cmd": "echo 0",
     "action_cmd": "echo"
   },
   "advanced_actions": ["change_vxnet", "scale_horizontal"],
