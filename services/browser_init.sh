@@ -17,7 +17,10 @@ systemctl start redis
 
 WORK_NODE_IP=0.0.0.0
 function getWorkNodeIP() {
+    echo "Getting work node" 
+    curl http://metadata/self/hosts/work_node
     WORK_NODE_IP=$(curl http://metadata/self/hosts/work_node | grep /ip | awk '{print $2}')
+    echo "Getting work node ip: $WORK_NODE_IP" 
 }
 getWorkNodeIP
 
