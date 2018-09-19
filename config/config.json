@@ -1,0 +1,151 @@
+{
+  "type": "array",
+  "properties": [{
+    "key": "cluster",
+    "description": "cluster properties",
+    "type": "array",
+    "properties": [{
+      "key": "name",
+      "type": "string",
+      "label": "Name",
+      "description": "The name of the Biglock Blockchain Browser service",
+      "default": "Biglock Blockchain Browser",
+      "required": "no"
+    }, {
+      "key": "description",
+      "type": "string",
+      "label": "Description",
+      "description": "The description of the Biglock Blockchain Browser service",
+      "default": "",
+      "required": "no"
+    }, {
+      "key": "vxnet",
+      "label": "VxNet",
+      "description": "Choose a vxnet to join",
+      "type": "string",
+      "default": "",
+      "required": "yes"
+    }, {
+      "key": "work_node",
+      "label": "Participant Node",
+      "description": "Properties for participant nodes",
+      "type": "array",
+      "properties": [{
+        "key": "cpu",
+        "label": "CPU",
+        "description": "CPUs of each node",
+        "type": "integer",
+        "default": 1,
+        "range": [1, 2, 4, 8, 16],
+        "required": "yes"
+      }, {
+        "key": "memory",
+        "label": "Memory",
+        "description": "Memory of each node (in MiB)",
+        "type": "integer",
+        "default": 2048,
+        "range": [1024, 2048, 4096, 8192, 16384, 32768, 49152],
+        "required": "yes"
+      }, {
+        "key": "instance_class",
+        "label": "Instance Class",
+        "description": "The instance type for the cluster to run, such as high performance, high performance plus",
+        "type": "integer",
+        "default": 0,
+        "range": [0, 1],
+        "required": "yes"
+      }, {
+        "key": "count",
+        "label": "Node Count",
+        "description": "Number of nodes",
+        "type": "integer",
+        "default": 1,
+        "range": [1],
+        "required": "yes"
+      }, {
+        "key": "volume_size",
+        "label": "Volume Size",
+        "description": "The volume size for each node",
+        "type": "integer",
+        "default": 10,
+        "required": "yes"
+      }]
+    },{
+      "key": "browser_node",
+      "label": "Participant Node",
+      "description": "Properties for participant nodes",
+      "type": "array",
+      "properties": [{
+        "key": "cpu",
+        "label": "CPU",
+        "description": "CPUs of each node",
+        "type": "integer",
+        "default": 1,
+        "range": [1, 2, 4, 8, 16],
+        "required": "yes"
+      }, {
+        "key": "memory",
+        "label": "Memory",
+        "description": "Memory of each node (in MiB)",
+        "type": "integer",
+        "default": 2048,
+        "range": [1024, 2048, 4096, 8192, 16384, 32768, 49152],
+        "required": "yes"
+      }, {
+        "key": "instance_class",
+        "label": "Instance Class",
+        "description": "The instance type for the cluster to run, such as high performance, high performance plus",
+        "type": "integer",
+        "default": 0,
+        "range": [0, 1],
+        "required": "yes"
+      }, {
+        "key": "count",
+        "label": "Node Count",
+        "description": "Number of nodes",
+        "type": "integer",
+        "default": 1,
+        "range": [1],
+        "required": "yes"
+      }, {
+        "key": "volume_size",
+        "label": "Volume Size",
+        "description": "The volume size for each node",
+        "type": "integer",
+        "default": 10,
+        "required": "yes"
+      }]
+    }]
+  }, {
+    "key": "env",
+    "description": "Application configuration properties",
+    "type": "array",
+    "properties": [{
+      "key": "admin_enabled",
+      "label": "Admin Enabled?",
+      "description": "Enable admin user to administrate Browser",
+      "type": "boolean",
+      "changeable": true,
+      "default": false,
+      "required": "yes"
+    }, {
+      "key": "admin_username",
+      "label": "Admin Username",
+      "description": "The username of the admin user (ignore if disabled), can contain lowercase letters and digits, and must start with lowercase letters, with 3-12 characters in total",
+      "type": "string",
+      "changeable": true,
+      "default": "super",
+      "pattern": "[a-z][a-z0-9]{3,12}",
+      "required": "yes"
+    }, {
+      "key": "admin_password",
+      "label": "Admin Password",
+      "description": "The password of the admin user (ignore if disabled), can contain uppercase & lowercase letters, digits, and the following 10 special characters !@#$%^&*() with 4-32 characters in total",
+      "type": "password",
+      "changeable": true,
+      "default": "Super12345",
+      "pattern": "[A-Za-z0-9!@#$%^&*()]{4,32}",
+      "required": "yes"
+    }]
+  }]
+}
