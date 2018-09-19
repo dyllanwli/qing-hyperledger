@@ -18,4 +18,4 @@ systemctl start redis
 cd $DEPLOY_DIR
 bash version.sh up
 # start a screen to run a fabric api daemon
-bash runTool.sh
+# bash runTool.sh
