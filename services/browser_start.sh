@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # /**
 #  * @author [lidiya]
 #  * @email [lidiya@veredholdings.com]
