@@ -19,11 +19,6 @@ export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 
 . ./profile.sh
 
-function restart() {
-    cd $SERVERS_DIR
-    bash browser_start.sh
-}
-
 function getWorkNodeIP() {
     echo "Getting work node" 
     curl http://metadata/self/hosts/work_node
@@ -32,6 +27,22 @@ function getWorkNodeIP() {
 }
 
 function getEnv() {
-    echo "Getting self env"
-    curl http://metadata/self/env
+    cd $EXPLORER_DIR
+    # modified explorer port
+    echo "changing port to $BROWSER_PORT"
+    sed -i "s/8888/$BROWSER_PORT/g" config.json
+    echo "change admin user to $ADMIN_USER_NAME"
+    sed -i "s/admin@bigtree.com/$ADMIN_USER_NAME/g" config.json
+    sed -i "s/admin@666666/$ADMIN_USER_PASSWORD/g" config.json
+
+
+    # echo "Getting env"
+    # curl http://metadata/self/env
+}
+
+
+function restart() {
+    cd $SERVERS_DIR
+    getEnv
+    bash browser_start.sh
 }
