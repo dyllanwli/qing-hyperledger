@@ -7,7 +7,6 @@
 #  * @desc [description]
 # */
 
-
 INIT_DIR=${PWD}
 DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
 SERVERS_DIR=/root/qing-hyperledger/services
@@ -16,6 +15,8 @@ SERVERS_DIR=/root/qing-hyperledger/services
 systemctl start docker 
 systemctl start redis
 cd $SERVERS_DIR
+git pull
+# using git pull is as a matter of convenience to not frequently build kvm image, this command will be deprecated 
 chmod +x ./*
 
 WORK_NODE_IP=0.0.0.0
