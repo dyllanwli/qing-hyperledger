@@ -126,7 +126,7 @@
       "description": "setting your browser client port, do remember to bind the port to your public IP",
       "type": "integer",
       "changeable": true,
-      "default": "8888",
+      "default": 8888,
       "required": "no"
     }, {
       "key": "admin_enabled",
