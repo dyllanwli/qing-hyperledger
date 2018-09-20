@@ -10,6 +10,7 @@
 INIT_DIR=${PWD}
 DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
 # including create and join channel, install example chaincode and instantiate it
+export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 cd $DEPLOY_DIR
 echo "Running deploy tool to deploy fabric"
 bash runTool.sh

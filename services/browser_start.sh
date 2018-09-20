@@ -30,4 +30,5 @@ sed -i "s/localhost/$WORK_NODE_IP/g" server.json
 
 
 cd $EXPLORER_DIR
+export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 pm2 start server.js
