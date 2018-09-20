@@ -15,5 +15,19 @@ EXPLORER_DIR=/root/blockchain-explorer
 # systemctl start docker 
 # systemctl start redis
 
+WORK_NODE_IP=0.0.0.0
+function getWorkNodeIP() {
+    echo "Getting work node" 
+    curl http://metadata/self/hosts/work_node
+    WORK_NODE_IP=$(curl http://metadata/self/hosts/work_node | grep /ip | awk '{print $2}')
+    echo "Getting work node ip: $WORK_NODE_IP" 
+}
+getWorkNodeIP
+
+cd $EXPLORER_DIR/config
+sed -i "s/localhost/$WORK_NODE_IP/g" network-config-tls.json
+sed -i "s/localhost/$WORK_NODE_IP/g" server.json
+
+
 cd $EXPLORER_DIR
 pm2 start server.js

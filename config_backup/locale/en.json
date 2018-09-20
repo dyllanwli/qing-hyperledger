@@ -1,8 +1,0 @@
-{
-    "Participant Node": "Participant Node",
-    "min": "Minimum Latency",
-    "avg": "Average Latency",
-    "max": "Maximum Latency",
-    "active": "Active Connections",
-    "outstanding": "Pending Connections"
-}
