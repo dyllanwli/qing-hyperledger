@@ -1,0 +1,7 @@
+[template]
+src = "browser.cfg.tmpl"
+dest = "/root/qing-hyperledger/services/profile.sh"
+keys = [
+  "/",
+]
+reload_cmd = "bash -e /root/qing-hyperledger/services/utils.sh restart"

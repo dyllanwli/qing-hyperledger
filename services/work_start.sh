@@ -9,7 +9,8 @@
 
 INIT_DIR=${PWD}
 DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
-# including create and join channel, install example chaincode and instantiate it
+EXPLORER_DIR=/root/blockchain-explorer
+SERVERS_DIR=/root/qing-hyperledger/services
 export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 cd $DEPLOY_DIR
 echo "Running deploy tool to deploy fabric"
