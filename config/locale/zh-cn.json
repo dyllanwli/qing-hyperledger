@@ -29,6 +29,7 @@
     "outstanding": "待处理连接数",
     "client": "客户端",
     "Admin Enabled?": "启用管理员用户？",
+    "browser port":"浏览器节点端口",
     "Enable admin user to administrate ZooKeeper cluster, ZNodes, and ACLs": "管理员用户可以对集群、ZNodes及其数据，以及权限控制 (ACL) 进行管理",
     "Admin Username": "管理员用户名",
     "The username of the admin user (ignore if disabled), can contain lowercase letters and digits, and must start with lowercase letters, with 3-12 characters in total": "管理员用户的用户名（不启用可忽略），可以由小写字母和数字组成，必须以字母开头，要求3到12位",
@@ -39,5 +40,7 @@
 
     "When enabled, ZooKeeper auto purge feature retains the autopurge.snapRetainCount most recent snapshots and the corresponding transaction logs in the dataDir and dataLogDir respectively and deletes the rest": "当自动清除功能 (Auto Purge) 开启时，所要保留的最新快照和事务日志文件数，其余文件将被清除",
 
-    "The time interval in hours for which the purge task has to be triggered; set to a positive integer (1 and above) to enable the auto purging": "自动清除功能的执行间隔，以小时为单位，0 表示不开启"
+    "The time interval in hours for which the purge task has to be triggered; set to a positive integer (1 and above) to enable the auto purging": "自动清除功能的执行间隔，以小时为单位，0 表示不开启",
+
+    "setting your browser client port, do remember to bind the port to your public IP": "设置浏览器的端口，并需要在后台将浏览器节点的端口绑定到公网IP"
 }

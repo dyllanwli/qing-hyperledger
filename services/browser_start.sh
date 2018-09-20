@@ -25,9 +25,14 @@ function getWorkNodeIP() {
 getWorkNodeIP
 
 cd $EXPLORER_DIR/config
+# modified work node port
 sed -i "s/localhost/$WORK_NODE_IP/g" network-config-tls.json
 sed -i "s/localhost/$WORK_NODE_IP/g" server.json
 
+cd $EXPLORER_DIR
+# modified explorer port
+$BROWSER_PORT
+sed -i "s/8888/$BROWSER_PORT/g" config.json
 
 cd $EXPLORER_DIR
 export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/

@@ -121,41 +121,39 @@
     "description": "Application configuration properties",
     "type": "array",
     "properties": [{
-        "key": "admin_enabled",
-        "label": "Admin Enabled?",
-        "description": "Enable admin user to administrate Browser",
-        "type": "boolean",
-        "changeable": true,
-        "default": false,
-        "required": "yes"
-      }, {
-        "key": "admin_username",
-        "label": "Admin Username",
-        "description": "The username of the admin user (ignore if disabled), can contain lowercase letters and digits, and must start with lowercase letters, with 3-12 characters in total",
-        "type": "string",
-        "changeable": true,
-        "default": "super",
-        "pattern": "[a-z][a-z0-9]{3,12}",
-        "required": "yes"
-      }, {
-        "key": "admin_password",
-        "label": "Admin Password",
-        "description": "The password of the admin user (ignore if disabled), can contain uppercase & lowercase letters, digits, and the following 10 special characters !@#$%^&*() with 4-32 characters in total",
-        "type": "password",
-        "changeable": true,
-        "default": "Super12345",
-        "pattern": "[A-Za-z0-9!@#$%^&*()]{4,32}",
-        "required": "yes"
-      },
-      {
-        "key": "test_parameter",
-        "label": "test label",
-        "description": "test description",
-        "type": "string",
-        "changeable": true,
-        "default": "test",
-        "required": "nos"
-      }
-    ]
+      "key": "browser_port",
+      "label": "browser port",
+      "description": "setting your browser client port, do remember to bind the port to your public IP",
+      "type": "string",
+      "changeable": true,
+      "default": "8888",
+      "required": "no"
+    }, {
+      "key": "admin_enabled",
+      "label": "Admin Enabled?",
+      "description": "Enable admin user to administrate Browser",
+      "type": "boolean",
+      "changeable": true,
+      "default": false,
+      "required": "yes"
+    }, {
+      "key": "admin_username",
+      "label": "Admin Username",
+      "description": "The username of the admin user (ignore if disabled), can contain lowercase letters and digits, and must start with lowercase letters, with 3-12 characters in total",
+      "type": "string",
+      "changeable": true,
+      "default": "admin@bigtree.com",
+      "pattern": "[a-z][a-z0-9]{3,12}",
+      "required": "yes"
+    }, {
+      "key": "admin_password",
+      "label": "Admin Password",
+      "description": "The password of the admin user (ignore if disabled), can contain uppercase & lowercase letters, digits, and the following 10 special characters !@#$%^&*() with 4-32 characters in total",
+      "type": "password",
+      "changeable": true,
+      "default": "admin@666666",
+      "pattern": "[A-Za-z0-9!@#$%^&*()]{4,32}",
+      "required": "yes"
+    }]
   }]
 }
