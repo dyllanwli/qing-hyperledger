@@ -17,8 +17,8 @@ export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 # systemctl start docker 
 # systemctl start redis
 
-. ./profile.sh
-. ./util.sh
+. $SERVERS_DIR/profile.sh
+. $SERVERS_DIR/utils.sh
 
 WORK_NODE_IP=0.0.0.0
 
