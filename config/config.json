@@ -124,7 +124,7 @@
       "key": "browser_port",
       "label": "browser port",
       "description": "setting your browser client port, do remember to bind the port to your public IP",
-      "type": "string",
+      "type": "integer",
       "changeable": true,
       "default": "8888",
       "required": "no"
