@@ -142,7 +142,7 @@
       "description": "The username of the admin user (ignore if disabled), can contain lowercase letters and digits, and must start with lowercase letters, with 3-12 characters in total",
       "type": "string",
       "changeable": true,
-      "default": "admin@bigtree.com",
+      "default": "admin",
       "pattern": "[a-z][a-z0-9]{3,12}",
       "required": "yes"
     }, {
@@ -151,7 +151,7 @@
       "description": "The password of the admin user (ignore if disabled), can contain uppercase & lowercase letters, digits, and the following 10 special characters !@#$%^&*() with 4-32 characters in total",
       "type": "password",
       "changeable": true,
-      "default": "admin@666666",
+      "default": "666666",
       "pattern": "[A-Za-z0-9!@#$%^&*()]{4,32}",
       "required": "yes"
     }]
