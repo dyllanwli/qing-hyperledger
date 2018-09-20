@@ -31,8 +31,13 @@ sed -i "s/localhost/$WORK_NODE_IP/g" server.json
 
 cd $EXPLORER_DIR
 # modified explorer port
-$BROWSER_PORT
+echo "changing port to $BROWSER_PORT"
 sed -i "s/8888/$BROWSER_PORT/g" config.json
+echo "change admin user"
+sed -i "s/admin@bigtree.com/$ADMIN_USER_NAME/g" config.json
+sed -i "s/admin@666666/$ADMIN_USER_PASSWORD/g" config.json
+
+
 
 cd $EXPLORER_DIR
 export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
