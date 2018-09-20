@@ -11,6 +11,7 @@ INIT_DIR=${PWD}
 DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
 # including create and join channel, install example chaincode and instantiate it
 cd $DEPLOY_DIR
+echo "Running deploy tool to deploy fabric"
 bash runTool.sh
 sleep 3
 bash installChaincode.sh init
