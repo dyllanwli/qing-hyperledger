@@ -46,3 +46,8 @@ function restart() {
     getEnv
     bash browser_start.sh
 }
+
+if  [$1 = "restart"]
+then
+    restart
+fi
