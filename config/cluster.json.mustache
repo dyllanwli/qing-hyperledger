@@ -19,11 +19,12 @@
     "server_id_upper_bound": 255,
     "services": {
       "init": {
+        "order": 1,
         "cmd": "bash /root/qing-hyperledger/services/work_init.sh"
       },
       "start": {
-        "cmd": "bash /root/qing-hyperledger/services/work_start.sh",
-        "order":1
+        "order": 1,
+        "cmd": "bash /root/qing-hyperledger/services/work_start.sh"
       },
       "stop": {
         "cmd": "bash /root/qing-hyperledger/services/work_stop.sh"
@@ -50,11 +51,12 @@
     "server_id_upper_bound": 255,
     "services": {
       "init": {
+        "order": 1,
         "cmd": "bash /root/qing-hyperledger/services/browser_init.sh"
       },
       "start": {
-        "cmd": "bash /root/qing-hyperledger/services/browser_start.sh",
-        "order":2
+        "order": 3,
+        "cmd": "bash /root/qing-hyperledger/services/browser_start.sh"
       },
       "stop": {
         "cmd": "bash /root/qing-hyperledger/services/browser_stop.sh"
