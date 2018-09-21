@@ -1,5 +1,5 @@
 [template]
-src = "browser.cfg.tmpl"
+src = "browser.sh.tmpl"
 dest = "/root/qing-hyperledger/services/profile.sh"
 keys = [
   "/",
