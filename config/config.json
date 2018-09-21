@@ -134,7 +134,7 @@
       "description": "Enable admin user to administrate Browser",
       "type": "boolean",
       "changeable": true,
-      "default": false,
+      "default": true,
       "required": "yes"
     }, {
       "key": "admin_username",
