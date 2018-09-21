@@ -30,7 +30,7 @@
     "client": "客户端",
     "Admin Enabled?": "启用管理员用户？",
     "browser port":"浏览器节点端口",
-    "Enable admin user to administrate ZooKeeper cluster, ZNodes, and ACLs": "管理员用户可以对集群、ZNodes及其数据，以及权限控制 (ACL) 进行管理",
+    "Enable admin user to administrate Browser": "启用管理员用户来进行登陆",
     "Admin Username": "管理员用户名",
     "The username of the admin user (ignore if disabled), can contain lowercase letters and digits, and must start with lowercase letters, with 3-12 characters in total": "管理员用户的用户名（不启用可忽略），可以由小写字母和数字组成，必须以字母开头，要求3到12位",
     "Admin Password": "管理员密码",
