@@ -32,9 +32,9 @@
     "browser port":"浏览器节点端口",
     "Enable admin user to administrate Browser": "启用管理员用户来进行登陆",
     "Admin Username": "管理员用户名",
-    "The username of the admin user (ignore if disabled), can contain lowercase letters and digits, and must start with lowercase letters, with 3-12 characters in total": "管理员用户的用户名（不启用可忽略），可以由小写字母和数字组成，必须以字母开头，要求3到12位",
+    "The username of the admin user (ignore if disabled), can contain lowercase letters and digits, and must start with lowercase letters, with 3-12 characters in total": "管理员用户的用户名，可以由小写字母和数字组成，必须以字母开头，要求3到12位",
     "Admin Password": "管理员密码",
-    "The password of the admin user (ignore if disabled), must contain letters and digits; the following 10 special characters !@#$%^&*() is allowed with 8-32 characters in total": "管理员用户的密码（不启用可忽略），需要包含字母和数字，允许特殊字符 !@#$%^&*() ，要求8到32位",
+    "The password of the admin user (ignore if disabled), must contain letters and digits; the following 10 special characters !@#$%^&*() is allowed with 8-32 characters in total": "管理员用户的密码，需要包含字母和数字，允许特殊字符 !@#$%^&*() ，要求8到32位",
 
     "Limits the number of concurrent connections (at the socket level) that a single client, identified by IP address, may make to a single member of the ZooKeeper ensemble; this is used to prevent certain classes of DoS attacks, including file descriptor exhaustion; setting this to 0 entirely removes the limit on concurrent connections": "限制以 IP 地址标识的客户端与单个 ZooKeeper 节点的最大并发连接数，用来防止某些 DoS 攻击，包括 file descriptor exhaustion ，设为 0 表示不做限制",
 
