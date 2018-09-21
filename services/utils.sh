@@ -44,10 +44,11 @@ function getEnv() {
 function restart() {
     cd $SERVERS_DIR
     getEnv
+    cd $SERVERS_DIR
     bash browser_start.sh
 }
 
-if  [$1 = "restart"]
+if  [ "$1" = "restart" ]
 then
     restart
 fi
