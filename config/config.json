@@ -148,11 +148,11 @@
     }, {
       "key": "admin_password",
       "label": "Admin Password",
-      "description": "The password of the admin user (ignore if disabled), can contain uppercase & lowercase letters, digits, and the following 10 special characters !@#$%^&*() with 4-32 characters in total",
+      "description": "The password of the admin user (ignore if disabled), must contain letters and digits; the following 10 special characters !@#$%^&*() is allowed with 8-32 characters in total",
       "type": "password",
       "changeable": true,
-      "default": "66666666",
-      "pattern": "[A-Za-z0-9!@#$%^&*()]{4,32}",
+      "default": "admin@666666",
+      "pattern": "[A-Za-z0-9!@#$%^&*()]{8,32}",
       "required": "yes"
     }]
   }]
