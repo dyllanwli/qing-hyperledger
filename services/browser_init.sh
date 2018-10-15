@@ -12,19 +12,19 @@ DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
 EXPLORER_DIR=/root/blockchain-explorer
 SERVERS_DIR=/root/qing-hyperledger/services
 # start docker.server and redis database
-systemctl start docker 
-systemctl start redis
+# systemctl start docker
+# systemctl start redis
 cd $SERVERS_DIR
-git pull
-# using git pull is as a matter of convenience to not frequently build kvm image, this command will be deprecated 
+# git pull
+# using git pull is as a matter of convenience to not frequently build kvm image, this command will be deprecated
 chmod +x ./*
 
 # WORK_NODE_IP=0.0.0.0
 # function getWorkNodeIP() {
-#     echo "Getting work node" 
+#     echo "Getting work node"
 #     curl http://metadata/self/hosts/work_node
 #     WORK_NODE_IP=$(curl http://metadata/self/hosts/work_node | grep /ip | awk '{print $2}')
-#     echo "Getting work node ip: $WORK_NODE_IP" 
+#     echo "Getting work node ip: $WORK_NODE_IP"
 # }
 # getWorkNodeIP
 

@@ -7,14 +7,13 @@
 #  * @desc [description]
 # */
 
-
 INIT_DIR=${PWD}
 DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
 EXPLORER_DIR=/root/blockchain-explorer
 SERVERS_DIR=/root/qing-hyperledger/services
 export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 # start docker.server and redis database
-# systemctl start docker 
+# systemctl start docker
 # systemctl start redis
 
 . $SERVERS_DIR/profile.sh
@@ -30,6 +29,7 @@ sed -i "s/localhost/$WORK_NODE_IP/g" network-config-tls.json
 sed -i "s/localhost/$WORK_NODE_IP/g" server.json
 
 getEnv
+# get user defined environment parameters
 
 cd $EXPLORER_DIR
 pm2 delete all
