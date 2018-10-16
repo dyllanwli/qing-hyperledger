@@ -22,6 +22,7 @@ export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 WORK_NODE_IP=0.0.0.0
 
 getWorkNodeIP
+# using metadata to get the workNodeIP
 
 cd $EXPLORER_DIR/config
 # modified work node port

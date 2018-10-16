@@ -12,6 +12,7 @@ DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
 EXPLORER_DIR=/root/blockchain-explorer
 SERVERS_DIR=/root/qing-hyperledger/services
 export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
+ROLE=NULL
 # start docker.server and redis database
 # systemctl start docker
 # systemctl start redis
@@ -44,6 +45,12 @@ function restart() {
 	getEnv
 	cd $SERVERS_DIR
 	bash browser_start.sh
+}
+
+function getRole() {
+	ROLE=$(curl http://metadata/self/host/role)
+	if [ "$ROLE" = "browser_node" ]; then
+	fi
 }
 
 if [ "$1" = "restart" ]; then
