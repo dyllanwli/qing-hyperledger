@@ -35,4 +35,4 @@ getEnv
 
 cd $EXPLORER_DIR
 pm2 delete all
-pm2 start server.js
+pm2 start ecosystem.config.js --env dev
