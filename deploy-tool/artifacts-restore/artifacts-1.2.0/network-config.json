@@ -12,7 +12,7 @@
 		},
 		"org1": {
 			"name": "peerOrg1",
-			"officialname": "核心企业",
+			"officialname": "企业1",
 			"orgEmail": "org1@example.com",
 			"mspid": "Org1MSP",
 			"ca": {
@@ -41,7 +41,7 @@
 		},
 		"org2": {
 			"name": "peerOrg2",
-			"officialname": "保理商",
+			"officialname": "企业2",
 			"orgEmail": "org2@example.com",
 			"mspid": "Org2MSP",
 			"ca": {

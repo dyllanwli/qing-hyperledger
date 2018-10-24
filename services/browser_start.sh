@@ -19,6 +19,7 @@ export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 . $SERVERS_DIR/profile.sh
 . $SERVERS_DIR/utils.sh
 
+# default work node ip
 WORK_NODE_IP=0.0.0.0
 
 getWorkNodeIP
@@ -26,8 +27,8 @@ getWorkNodeIP
 
 cd $EXPLORER_DIR/config
 # modified work node port
-sed -i "s/localhost/$WORK_NODE_IP/g" network-config-tls.json
-sed -i "s/localhost/$WORK_NODE_IP/g" server.json
+sed -i "s/localhost/$WORK_NODE_IP/g" ./dev/network-config-tls.json
+sed -i "s/localhost/$WORK_NODE_IP/g" ./dev/docker.json
 
 getEnv
 # get user defined environment parameters
