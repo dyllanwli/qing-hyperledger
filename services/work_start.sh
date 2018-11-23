@@ -18,10 +18,10 @@ cd $DEPLOY_DIR
 echo "Running deploy tool to deploy fabric"
 bash runTool.sh
 sleep 3
-# bash installChaincode.sh init
+bash installChaincode.sh init
 
 sleep 5
 # sample invoke test
-# bash invoke.sh   
+bash invoke.sh   
 # quit the screen session
 # screen -XS tool quit
