@@ -27,7 +27,7 @@ function getWorkNodeIP() {
 }
 
 function getEnv() {
-	cd $EXPLORER_DIR
+	# cd $EXPLORER_DIR
 	# modified explorer port
 	# s/default parameter/target parameter/g
 	echo "changing port to $BROWSER_PORT"
@@ -37,7 +37,7 @@ function getEnv() {
 	# sed -i "s/admin@bigtree.com/$ADMIN_USER_NAME/g" ./config/dev/server.json
 	node $SERVERS_DIR/config.js $EXPLORER_DIR/config/dev/server.json superAccount.username $ADMIN_USER_NAME
 	# sed -i "s/admin@666666/$ADMIN_USER_PASSWORD/g" ./config/dev/server.json
-	node $SERVERS_DIR/config.js $EXPLORER_DIR/config/dev/server.json superAccount.secret $ADMIN_USER_PASSWORD
+	node $SERVERS_DIR/config.js $EXPLORER_DIR/config/dev/server.json superAccount.passwd $ADMIN_USER_PASSWORD
 
 	# echo "Getting env"
 	# curl http://metadata/self/env
