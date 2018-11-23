@@ -6,7 +6,7 @@
 #  * @modify date 2018-09-19 14:24:42
 #  * @desc [description]
 # */
-
+echo "Running Browser_start"
 INIT_DIR=${PWD}
 DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
 EXPLORER_DIR=/root/blockchain-explorer

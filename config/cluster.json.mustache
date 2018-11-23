@@ -7,7 +7,7 @@
     "container": {
       "type": "kvm",
       "zone": "pek3",
-      "image": "img-gmcyhbvj"
+      "image": "img-x9l9tc9l"
     },
     "count": 1,
     "cpu": {{cluster.work_node.cpu}},
@@ -39,7 +39,7 @@
     "container": {
       "type": "kvm",
       "zone": "pek3",
-      "image": "img-gmcyhbvj"
+      "image": "img-x9l9tc9l"
     },
     "count": 1,
     "cpu": {{cluster.browser_node.cpu}},
@@ -60,9 +60,6 @@
       },
       "stop": {
         "cmd": "/root/qing-hyperledger/services/browser_stop.sh"
-      },
-      "restart": {
-        "cmd": "/root/qing-hyperledger/services/browser_start.sh"
       },
       "upgrade": {
         "cmd": "echo 'upgrade' "
