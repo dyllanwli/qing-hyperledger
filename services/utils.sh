@@ -17,7 +17,7 @@ ROLE=NULL
 # systemctl start docker
 # systemctl start redis
 
-. ./profile.sh
+. $SERVERS_DIR/profile.sh
 
 function getWorkNodeIP() {
 	echo "Getting work node"
