@@ -20,7 +20,7 @@ cd $SERVERS_DIR
 chmod +x ./*
 
 # using deploy-tool to build the hyperledger fabric network
-cd $DEPLOY_DIR
-bash version.sh up
+# cd $DEPLOY_DIR
+# bash version.sh up
 # start a screen to run a fabric api daemon
 # bash runTool.sh

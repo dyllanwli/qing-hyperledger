@@ -13,6 +13,8 @@ EXPLORER_DIR=/root/blockchain-explorer
 SERVERS_DIR=/root/qing-hyperledger/services
 export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 cd $DEPLOY_DIR
+bash version.sh up
+cd $DEPLOY_DIR
 echo "Running deploy tool to deploy fabric"
 bash runTool.sh
 sleep 3
