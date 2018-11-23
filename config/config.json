@@ -55,14 +55,6 @@
         "range": [0, 1],
         "required": "yes"
       }, {
-        "key": "count",
-        "label": "Node Count",
-        "description": "Number of nodes",
-        "type": "integer",
-        "default": 1,
-        "range": [1],
-        "required": "yes"
-      }, {
         "key": "volume_size",
         "label": "Volume Size",
         "description": "The volume size for each node",
@@ -100,14 +92,6 @@
         "range": [0, 1],
         "required": "yes"
       }, {
-        "key": "count",
-        "label": "Node Count",
-        "description": "Number of nodes",
-        "type": "integer",
-        "default": 1,
-        "range": [1],
-        "required": "yes"
-      }, {
         "key": "volume_size",
         "label": "Volume Size",
         "description": "The volume size for each node",
@@ -128,14 +112,6 @@
       "changeable": true,
       "default": 8888,
       "required": "no"
-    }, {
-      "key": "admin_enabled",
-      "label": "Admin Enabled?",
-      "description": "Enable admin user to administrate Browser",
-      "type": "boolean",
-      "changeable": true,
-      "default": true,
-      "required": "yes"
     }, {
       "key": "admin_username",
       "label": "Admin Username",

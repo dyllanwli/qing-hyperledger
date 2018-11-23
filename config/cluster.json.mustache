@@ -9,7 +9,7 @@
       "zone": "pek3",
       "image": "img-iqz72s6m"
     },
-    "count": {{cluster.work_node.count}},
+    "count": 1,
     "cpu": {{cluster.work_node.cpu}},
     "memory": {{cluster.work_node.memory}},
     "instance_class": {{cluster.work_node.instance_class}},
@@ -41,7 +41,7 @@
       "zone": "pek3",
       "image": "img-iqz72s6m"
     },
-    "count": {{cluster.browser_node.count}},
+    "count": 1,
     "cpu": {{cluster.browser_node.cpu}},
     "memory": {{cluster.browser_node.memory}},
     "instance_class": {{cluster.browser_node.instance_class}},
@@ -77,7 +77,6 @@
   "env": {
     "BROWSER_PORT": {{env.browser_port}},
     "ADMIN_USER_NAME":{{env.admin_username}},
-    "ADMIN_USER_PASSWORD":{{env.admin_password}},
-    "ADMIN_IS_ENABLE":{{env.admin_enabled}}
+    "ADMIN_USER_PASSWORD":{{env.admin_password}}
   }
 }
