@@ -41,9 +41,10 @@ function getEnv() {
 }
 
 function restart() {
+	# cd $SERVERS_DIR
+	# getEnv
 	cd $SERVERS_DIR
-	getEnv
-	cd $SERVERS_DIR
+	echo "Restarting Blockchain Explorer"
 	bash browser_start.sh
 }
 

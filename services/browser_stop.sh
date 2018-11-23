@@ -16,4 +16,4 @@ EXPLORER_DIR=/root/blockchain-explorer
 # systemctl start redis
 
 # cd $EXPLORER_DIR
-pm2 delete server
+pm2 delete all
