@@ -51,6 +51,7 @@ function restart() {
 function getRole() {
 	ROLE=$(curl http://metadata/self/host/role)
 	if [ "$ROLE" = "browser_node" ]; then
+		echo "This is Role"
 	fi
 }
 
