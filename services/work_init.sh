@@ -15,7 +15,7 @@ SERVERS_DIR=/root/qing-hyperledger/services
 # systemctl start docker
 # systemctl start redis
 cd $SERVERS_DIR
-git pull
+# git pull
 # using git pull is as a matter of convenience to not frequently build kvm image, this command will be deprecated
 chmod +x ./*
 
