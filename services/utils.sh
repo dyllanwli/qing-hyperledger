@@ -31,10 +31,13 @@ function getEnv() {
 	# modified explorer port
 	# s/default parameter/target parameter/g
 	echo "changing port to $BROWSER_PORT"
-	sed -i "s/8888/$BROWSER_PORT/g" ./config/dev/server.json
+	# sed -i "s/8888/$BROWSER_PORT/g" ./config/dev/server.json
+	node config.js ./config/dev/server.json port $BROWSER_PORT
 	echo "change admin user to $ADMIN_USER_NAME"
-	sed -i "s/admin@bigtree.com/$ADMIN_USER_NAME/g" ./config/dev/server.json
-	sed -i "s/admin@666666/$ADMIN_USER_PASSWORD/g" ./config/dev/server.json
+	# sed -i "s/admin@bigtree.com/$ADMIN_USER_NAME/g" ./config/dev/server.json
+	node config.js ./config/dev/server.json superAccount.username $ADMIN_USER_NAME
+	# sed -i "s/admin@666666/$ADMIN_USER_PASSWORD/g" ./config/dev/server.json
+	node config.js ./config/dev/server.json superAccount.secret $ADMIN_USER_PASSWORD
 
 	# echo "Getting env"
 	# curl http://metadata/self/env
