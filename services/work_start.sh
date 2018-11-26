@@ -22,6 +22,6 @@ bash installChaincode.sh init
 
 sleep 5
 # sample invoke test
-bash invoke.sh   
+# bash invoke.sh   
 # quit the screen session
 # screen -XS tool quit
