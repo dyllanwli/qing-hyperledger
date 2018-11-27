@@ -20,7 +20,7 @@ fi
 
 # main function
 # installAndInstantiate chaincodePath chaincodeName version
-# installAndInstantiate example example v0
+installAndInstantiate example example v0
 
 # upgrade sample
 # installAndInstantiate repay scf-repay v1
