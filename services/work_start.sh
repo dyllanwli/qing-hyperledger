@@ -16,6 +16,7 @@ cd $DEPLOY_DIR
 bash version.sh up
 cd $DEPLOY_DIR
 echo "Running deploy tool to deploy fabric"
+pm2 delete all
 bash runTool.sh
 sleep 3
 bash installChaincode.sh init
