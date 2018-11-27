@@ -11,14 +11,15 @@ INIT_DIR=${PWD}
 DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
 EXPLORER_DIR=/root/blockchain-explorer
 SERVERS_DIR=/root/qing-hyperledger/services
-export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 cd $DEPLOY_DIR
 bash version.sh up
 cd $DEPLOY_DIR
+sleep 6
 echo "Running deploy tool to deploy fabric"
+export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 pm2 delete all
 bash runTool.sh
-sleep 3
+sleep 2
 bash installChaincode.sh init
 
 sleep 5
