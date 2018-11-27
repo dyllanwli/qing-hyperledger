@@ -19,8 +19,8 @@ cd $DEPLOY_DIR
 sleep 5
 echo "Running deploy tool to deploy fabric"
 export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
-# pm2 delete all
-# bash runTool.sh
+pm2 delete all
+bash runTool.sh
 # sleep 2
 bash installChaincode.sh init
 
