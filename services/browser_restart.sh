@@ -9,13 +9,16 @@
 echo "Running Browser_start"
 INIT_DIR=${PWD}
 DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
-MONGO_CONFIG_DIR=/root/qing-hyperledger/deploy-tool/artifacts-restore
 EXPLORER_DIR=/root/blockchain-explorer
 SERVERS_DIR=/root/qing-hyperledger/services
 export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 # start docker.server and redis database
 # systemctl start docker
 # systemctl start redis
+pm2 delete all
+kill 9 $(ps -ef |grep node | awk '{print $2}')
+
+systemctl restart redis
 
 . $SERVERS_DIR/profile.sh
 . $SERVERS_DIR/utils.sh
@@ -34,14 +37,5 @@ fi
 getEnv
 # get user defined environment parameters
 
-kill -9 $(ps -ef| grep node |awk '{print $2)')
-pm2 list
-pm2 delete all
-sleep 5
-cd $MONGO_CONFIG_DIR
-docker rm -f $(docker ps -a -q)
-sleep 3
-docker-compose -f mongo.yaml up -d
-sleep 3
 cd $EXPLORER_DIR
 pm2 start ecosystem.config.js --env dev

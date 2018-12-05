@@ -48,7 +48,7 @@ function restart() {
 	# getEnv
 	cd $SERVERS_DIR
 	echo "Restarting Blockchain Explorer"
-	bash browser_start.sh
+	bash browser_restart.sh
 }
 
 function getRole() {

@@ -6,7 +6,7 @@
 #  * @modify date 2018-09-19 14:23:47
 #  * @desc [description]
 # */
-ehco "ENV:"
+echo "ENV:"
 env
 
 INIT_DIR=${PWD}
@@ -21,7 +21,7 @@ echo "Running deploy tool to deploy fabric"
 export PATH=$PATH:/root/.nvm/versions/node/v8.9.4/bin/
 pm2 delete all
 bash runTool.sh
-# sleep 2
+sleep 5
 bash installChaincode.sh init
 
 sleep 5

@@ -11,8 +11,8 @@
 INIT_DIR=${PWD}
 DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
 
-# cd $DEPLOY_DIR
+cd $DEPLOY_DIR
 # terminate the fabric network
-# bash version.sh down
+bash version.sh down
 
-# docker stop -f $(docker ps -a | grep hyperledger | awk '{print $1}')
+# docker stop $(docker ps -a | grep hyperledger | awk '{print $1}')

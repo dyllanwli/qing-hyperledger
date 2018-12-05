@@ -9,6 +9,7 @@
 
 INIT_DIR=${PWD}
 DEPLOY_DIR=/root/qing-hyperledger/deploy-tool
+MONGO_CONFIG_DIR=/root/qing-hyperledger/deploy-tool/artifacts-restore
 EXPLORER_DIR=/root/blockchain-explorer
 SERVERS_DIR=/root/qing-hyperledger/services
 # start docker.server and redis database
@@ -27,7 +28,11 @@ chmod +x ./*
 #     echo "Getting work node ip: $WORK_NODE_IP"
 # }
 # getWorkNodeIP
-
+# start mongo docker
+cd $MONGO_CONFIG_DIR
+docker rm -f $(docker ps -a -q)
+sleep 3
+docker-compose -f mongo.yaml up -d
 # cd $EXPLORER_DIR/config
 # sed -i "s/localhost/$WORK_NODE_IP/g" network-config-tls.json
 # sed -i "s/localhost/$WORK_NODE_IP/g" server.json
